@@ -1,57 +1,217 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!-- Bắt đầu -->
-<html lang="vi" dir="ltr">
-<!-- Phần Head -->
-  <head>
-    <meta charset="UTF-8">
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-<!-- Phần body -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trang đăng ký</title>
+
+<style type="text/css">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  font-size: 18px;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 90px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+.final-details {
+  margin-bottom: 20px;
+}
+
+.final-details label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.final-details select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+</style>
+
+<script type="text/javascript">
+	function validateFormSignUp(){
+		var passwordUser = document.form_sign_up.passwordUser.value;
+		var nameLogin = document.form_sign_up.nameLogin.value;
+		//kiểm tra dộ dài mật khẩu
+		if(passwordUser.length < 6){
+			document.getElementById("errorUserPassWord").innerHTML = "Độ dài mật khẩu tối thiểu 6 kí tự";
+		}
+		else{
+			document.getElementById("errorUserPassWord").innerHTML = "";
+		}
+		//kiểm tra tên tài khoản
+		var userNamePattern = /^[a-zA-Z0-9]+$/;
+		if (!userNamePattern.test(nameLogin)) {
+	        document.getElementById("errorNameLogin").innerHTML = "Tên tài khoản chỉ được chứa các ký tự chữ cái và số, không có khoảng trắng và dấu";
+	    } 
+	    else{
+	        document.getElementById("errorNameLogin").innerHTML = "";
+	    }
+		return (passwordUser.length >= 6 && userNamePattern.test(nameLogin));
+	}
+</script>
+</head>
 <body>
-  <div class="container">
+<div class="error-signup">
+	<div style="color: red;"><%= request.getAttribute("messageSignup")!=null?request.getAttribute("messageSignup") : ""  %></div>
+	<div style="color: red;" id="errorUserPassWord"></div>
+	<div style="color: red;" id="errorNameLogin"></div>
+</div>
+
+<div class="container">
     <div class="title">Đăng ký</div>
+    <div class="title">Trang chủ</div>
     <div class="content">
-      <form action="#">
+      <form action="SignupController" method="POST" name="form_sign_up" onsubmit="return validateFormSignUp()">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Họ Tên</span>
-            <input type="text" placeholder="Nhập họ tên" required>
+            <input type="text" placeholder="Nhập họ tên" required name="nameUser">
           </div>
           <div class="input-box">
             <span class="details">Tên Tài Khoản</span>
-            <input type="text" placeholder="Nhập tên tài khoản" required>
+            <input type="text" placeholder="Nhập tên tài khoản" required name="nameLogin">
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Nhập email" required>
+            <input type="text" placeholder="Nhập email" required name="emailUser">
           </div>
           <div class="input-box">
             <span class="details">Số Điện Thoại</span>
-            <input type="text" placeholder="Nhập số điện thoại" required>
+            <input type="text" placeholder="Nhập số điện thoại" required name="phoneUser">
           </div>
           <div class="input-box">
             <span class="details">Mật Khẩu</span>
-            <input type="text" placeholder="Nhập mật khẩu" required>
+            <input type="password" placeholder="Nhập mật khẩu" required name="passwordUser">
           </div>
           <div class="input-box">
-            <span class="details">Xác Nhận Mật Khẩu</span>
-            <input type="text" placeholder="Nhập mật khẩu" required>
+            <span class="details">Địa chỉ</span>
+            <input type="text" placeholder="Nhập địa chỉ" required name="addressUser">
           </div>
         </div>
         <div class="final-details">
           <label for="gender">Giới Tính:</label>
-            <select id="gender" name="gender">
-              <option value="male">Nam</option>
-              <option value="female">Nữ</option>
+            <select id="gender" name="genderUser">
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
             </select>
         </div>
         <div class="final-details">
           <label for="role">Bạn Là:</label>
             <select id="role" name="role">
-              <option value="customer">Khách Hàng</option>
-              <option value="restaurant">Nhà Hàng</option>
+              <option value="1">Khách Hàng</option>
+              <option value="2">Nhà Hàng</option>
             </select>
         </div>
         <div class="button">
@@ -60,6 +220,5 @@
       </form>
     </div>
   </div>
-
 </body>
 </html>
