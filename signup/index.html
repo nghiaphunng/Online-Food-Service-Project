@@ -14,6 +14,15 @@
   font-family: 'Poppins',sans-serif;
   font-size: 18px;
 }
+.error-signup {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-signup div {
+  margin-bottom: 10px;
+}
+
 body{
   height: 100vh;
   display: flex;
@@ -29,12 +38,15 @@ body{
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  justify-content: space-between;
+  align-items: center;
 }
 .container .title{
   font-size: 25px;
   font-weight: 500;
   position: relative;
 }
+
 .container .title::before{
   content: "";
   position: absolute;
@@ -45,6 +57,7 @@ body{
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
+
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
@@ -137,6 +150,20 @@ form .user-details .input-box{
     flex-direction: column;
   }
 }
+
+.trangchu{
+  text-align: center;
+  margin-top: 20px;
+}
+.trangchu a{
+  text-decoration: none;
+  color: #9b59b6;
+  font-weight: 500;
+  font-size: 18px;
+}
+.trangchu a:hover {
+  color: #71b7e6;
+}
 </style>
 
 <script type="text/javascript">
@@ -171,7 +198,7 @@ form .user-details .input-box{
 
 <div class="container">
     <div class="title">Đăng ký</div>
-    <div class="title">Trang chủ</div>
+    
     <div class="content">
       <form action="SignupController" method="POST" name="form_sign_up" onsubmit="return validateFormSignUp()">
         <div class="user-details">
@@ -217,7 +244,11 @@ form .user-details .input-box{
         <div class="button">
           <input type="submit" value="Đăng ký">
         </div>
+        <div class="trangchu">
+          <a href="#">Trang Chủ</a>
+        </div>
       </form>
+
     </div>
   </div>
 </body>
