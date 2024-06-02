@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    const filterForm = document.querySelector('.filter-box form'); // Changed to use class
-    const resultsContainer = document.querySelector('.results');
     let items = []; // This will hold your items data, you can populate this from your server or define it here
     const filterButton = document.querySelector('.filter-button');
     const filterBox = document.querySelector('.filter-box');
+    const filterForm = document.querySelector('.filter-box form'); // Changed to use class
+    const resultsContainer = document.querySelector('.results');
+
     // Mock data for demonstration
     items = [
         {
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "142 Đa Kao, P. Tân Định, TP HCM",
             city: "hcm",
             price: "50.000",
-            image: "comga.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 120
         },
         {
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "Lô D01 Chung Cư A4, P. Tân Định, TP HCM",
             city: "hcm",
             price: "40.000",
-            image: "banhtrang.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 85
         },
         {
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "142 Đa Kao, P. Tân Định, TP HCM",
             city: "hcm",
             price: 50000,
-            image: "comga.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 120
         },
         {
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "Lô D01 Chung Cư A4, P. Tân Định, TP HCM",
             city: "hcm",
             price: 40000,
-            image: "banhtrang.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 85
         },
         {
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "26 Lê Thị Riêng, P. Bến Thành, Quận 1",
             city: "hcm",
             price: 30000,
-            image: "banhmi.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 150
         },
         {
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "49 Bát Đàn, P. Cửa Đông, Quận Hoàn Kiếm",
             city: "hn",
             price: 60000,
-            image: "pho.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 200
         },
         {
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "15 Lê Lợi, Quận 1, TP HCM",
             city: "hcm",
             price: 25000,
-            image: "nuocdua.jpg",
-            category: "drink",
+            image: "ganuong.jpg",
+            category: "Đồ uống",
             popularity: 75
         },
         {
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "76 Nguyễn Văn Cừ, Quận 1, TP HCM",
             city: "hcm",
             price: 45000,
-            image: "bunthitnuong.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 150
         },
         {
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "25 Đinh Tiên Hoàng, Quận Hoàn Kiếm, Hà Nội",
             city: "hn",
             price: 25000,
-            image: "suachuancam.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 80
         },
         {
@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "89 Nguyễn Đình Chiểu, Huế",
             city: "hue",
             price: 35000,
-            image: "nemluihue.jpg",
-            category: "food",
+            image: "ganuong.jpg",
+            category: "Đồ ăn",
             popularity: 100
         },
         {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 20000,
             image: "nuocdualoc.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 70
         },
         {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hn",
             price: 40000,
             image: "bunmam.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 120
         },
         {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 30000,
             image: "chethai.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 90
         },
         {
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 55000,
             image: "banhcanhcua.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 140
         },
         {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 15000,
             image: "nuocduamat.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 60
         },
         {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 25000,
             image: "goicuon.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 80
         },
         {
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hn",
             price: 35000,
             image: "bunthang.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 100
         },
         {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 40000,
             image: "trasuathai.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 110
         },
         {
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 30000,
             image: "banhxeo.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 90
         },
         {
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 25000,
             image: "chaolong.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 80
         },
         {
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 25000,
             image: "tradao.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 70
         },
         {
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 20000,
             image: "banhgoidongkhoi.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 75
         },
         {
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 30000,
             image: "sinhtobochuoi.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 85
         },
         {
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hn",
             price: 40000,
             image: "buncha.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 110
         },
         {
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hn",
             price: 20000,
             image: "cafesuanong.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 65
         },
         {
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 35000,
             image: "nemnuongdalat.jpg",
-            category: "food",
+            category: "Đồ ăn",
             popularity: 95
         },
         {
@@ -247,52 +247,102 @@ document.addEventListener('DOMContentLoaded', () => {
             city: "hcm",
             price: 25000,
             image: "nuocduacat.jpg",
-            category: "drink",
+            category: "Đồ uống",
             popularity: 75
         },
-        // Add more items as needed
+        
     ];
 
-    // Function to create a card for each item
-    function createCard(item) {
-        const card = document.createElement('div');
-        card.classList.add('card');
+    // Hàm tạo card
+function createCard(item) {
+    const card = document.createElement('div');
+    card.classList.add('card');
 
-        const img = document.createElement('img');
-        img.src = item.image;
-        card.appendChild(img);
+    const img = document.createElement('img');
+    img.src = item.image;
+    card.appendChild(img);
 
-        const cardContent = document.createElement('div');
-        cardContent.classList.add('card-content');
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('card-content');
 
-        const title = document.createElement('h3');
-        title.textContent = item.title;
-        cardContent.appendChild(title);
+    const title = document.createElement('h3');
+    title.textContent = item.title;
+    cardContent.appendChild(title);
 
-        const location = document.createElement('p');
-        location.textContent = item.location;
-        cardContent.appendChild(location);
+    const location = document.createElement('p');
+    location.textContent = item.location;
+    cardContent.appendChild(location);
 
-        card.appendChild(cardContent);
+    card.appendChild(cardContent);
 
-        const cardFooter = document.createElement('div');
-        cardFooter.classList.add('card-footer');
+    const cardFooter = document.createElement('div');
+    cardFooter.classList.add('card-footer');
 
-        const price = document.createElement('span');
-        price.textContent = item.price + ' VNĐ'; // Append VNĐ to indicate currency
-        cardFooter.appendChild(price);
+    const price = document.createElement('span');
+    price.textContent = item.price + ' VNĐ';
+    cardFooter.appendChild(price);
 
-        const badge = document.createElement('span');
-        badge.classList.add('badge');
-        badge.textContent = "Thêm vào giỏ hàng";
-        cardFooter.appendChild(badge);
+    const badge = document.createElement('a');
+    badge.classList.add('badge');
+    badge.href = "#";
+    badge.textContent = "Thêm";
+    cardFooter.appendChild(badge);
 
-        card.appendChild(cardFooter);
+    card.appendChild(cardFooter);
 
-        return card;
-    }
+    // Bắt sự kiện mouseenter để hiển thị modal
+    card.addEventListener('mouseenter', function() {
+        const modal = createModal(item);
+        document.body.appendChild(modal);
+    });
 
-    // Function to display items based on filter criteria
+    // Bắt sự kiện mouseleave để xóa modal
+    card.addEventListener('mouseleave', function() {
+        const modal = document.querySelector('.modal');
+        if (modal) {
+            modal.remove();
+        }
+    });
+
+    return card;
+}
+
+// Hàm tạo modal hiển thị chi tiết sản phẩm
+function createModal(item) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.addEventListener('click', function() {
+        modal.remove();
+    });
+
+    const title = document.createElement('h2');
+    title.textContent = item.title;
+
+    const location = document.createElement('p');
+    location.textContent = item.location;
+
+    const price = document.createElement('p');
+    price.textContent = 'Giá: ' + item.price + ' VNĐ';
+
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(title);
+    modalContent.appendChild(location);
+    modalContent.appendChild(price);
+
+    modal.appendChild(modalContent);
+
+    return modal;
+}
+
+
+    // Hàm hiển thị các sản phẩm đã lọc
     function displayFilteredItems(filteredItems) {
         resultsContainer.innerHTML = '';
         filteredItems.forEach(item => {
@@ -301,49 +351,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Event listener for filter button click
-    filterButton.addEventListener('click', () => {
-        if (filterBox.style.display === 'none') {
-            filterBox.style.display = 'block';
-        } else {
-            filterBox.style.display = 'none';
-        }
-    });
+    // Hàm lọc sản phẩm
+    function filterItems(event) {
+        event.preventDefault(); // Ngăn chặn form submit mặc định
 
-    // Event listener for filter form submission
-    filterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        // Lấy các giá trị lọc từ form
+        const area = document.getElementById('area').value;
+        const priceRange = document.getElementById('price-range').value;
+        const type = document.getElementById('type').value;
 
-        console.log("Form submitted!"); // Check if form submission is captured
-
-        const area = document.querySelector('.filter-box #area').value; // Changed to use class
-        const priceRange = document.querySelector('.filter-box #price-range').value; // Changed to use class
-        const type = document.querySelector('.filter-box #type').value; // Changed to use class
-
-        console.log(`Area: ${area}, Price Range: ${priceRange}, Type: ${type}`); // Check values of filters
-
-        // Filter items based on selected criteria
-        let filteredItems = items.filter(item => {
-            if (area !== 'all' && item.city !== area) {
-                return false;
+        // Lọc các sản phẩm theo các tiêu chí đã chọn
+        const filteredItems = items.filter(item => {
+            let isAreaMatch = (area === "0" || area === item.city);
+            let isPriceMatch = false;
+            let isTypeMatch = (type === "0" || type === item.category);
+            console.log(isAreaMatch);
+            console.log(isPriceMatch);
+            console.log(isTypeMatch);
+            // Kiểm tra khoảng giá của sản phẩm
+            if (priceRange === "0") {
+                isPriceMatch = true;
+            } else if (priceRange === "1" && item.price <= 30000) {
+                isPriceMatch = true;
+            } else if (priceRange === "2" && item.price > 30000 && item.price <= 50000) {
+                isPriceMatch = true;
+            } else if (priceRange === "3" && item.price > 50000 && item.price <= 100000) {
+                isPriceMatch = true;
             }
-            const priceRangeLimits = priceRange.split('-').map(Number);
-            const itemPrice = parseFloat(item.price);
-            if (!(itemPrice >= priceRangeLimits[0] && itemPrice <= priceRangeLimits[1])) {
-                return false;
-            }
-            if (type !== 'all' && item.category !== type) {
-                return false;
-            }
-            return true;
+
+            return isAreaMatch && isPriceMatch && isTypeMatch;
         });
 
-        console.log("Filtered items:", filteredItems); // Check filtered items
-
-        // Display filtered items
+        // Hiển thị các sản phẩm đã lọc
         displayFilteredItems(filteredItems);
+        console.log(filteredItems)
+    }
+
+    // Bắt sự kiện khi form lọc được submit
+    filterForm.addEventListener('submit', filterItems);
+
+    // Bắt sự kiện khi click vào nút "Bộ Lọc"
+    filterButton.addEventListener('click', () => {
+        if (filterBox.style.display === 'block') {
+            filterBox.style.display = 'none';
+        } else {
+            filterBox.style.display = 'block';
+        }
     });
 
     // Initial display of all items
     displayFilteredItems(items);
 });
+

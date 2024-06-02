@@ -1,37 +1,46 @@
-
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-*{
-    padding:0;
-    margin:0;
-
+/* Reset padding và margin cho tất cả các phần tử */
+* {
+    padding: 0;
+    margin: 0;
 }
+
+/* Style cho body */
 body {
     font-family: Arial, sans-serif;
-    font-size:14px;
-    color:#111;
-    line-height:1.15;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.15;
 }
 
+/* Style cho container chính */
 .container {
-    
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
 }
 
+/* Style cho header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #dfdbdb;
+    height: 70px;
 }
 
 header img {
     height: 50px;
 }
 
+/* Style cho location trong header */
 header .location {
     display: flex;
     align-items: center;
@@ -41,8 +50,13 @@ header .location label {
     margin-right: 10px;
 }
 
+/* Main section margin-top để không bị che bởi header */
+main {
+    margin-top: 70px;
+}
+
+/* Style cho button */
 button {
-    
     padding: 10px 20px;
     background-color: #ff5722;
     color: white;
@@ -55,6 +69,7 @@ button:hover {
     background-color: #e64a19;
 }
 
+/* Style cho nav */
 nav ul {
     list-style: none;
     padding: 0;
@@ -72,18 +87,14 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Style cho filter trong main */
 main .filter {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-main .results {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
+/* Style cho card */
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -106,13 +117,20 @@ main .results {
     margin: 0;
     font-size: 1.2em;
     color: #333;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 .card-content p {
     margin: 5px 0;
     color: #666;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
+/* Style cho footer của card */
 .card-footer {
     display: flex;
     justify-content: space-between;
@@ -127,9 +145,10 @@ main .results {
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    text-decoration: none;
 }
 
-/* Modal styles */
+/* Style cho modal */
 .modal {
     display: none; 
     position: fixed; 
@@ -167,12 +186,15 @@ main .results {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Style cho grid container */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 5px;
-  }
-  .grid-item {
+}
+
+.grid-item {
     padding: 50px;
     font-weight: 650;
     text-align: center;
@@ -182,18 +204,17 @@ main .results {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-  }
-  
- 
+    font-variation-settings: "wdth" 100;
+}
 
+/* Style cho filter button */
 .filter-button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
+/* Style cho filter box */
 .filter-box {
     display: none;
     position: static;
@@ -216,8 +237,50 @@ main .results {
     margin-bottom: 10px;
 }
 
+/* Style cho kết quả trong main */
 main .results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 15px;
+}
+
+
+
+/* Style cho modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

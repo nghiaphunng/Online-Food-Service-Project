@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to toggle filter box visibility
     filterButton.addEventListener('click', () => {
+        console.log(filterBox.style.display)
         if (filterBox.style.display === 'block') {
             filterBox.style.display = 'none';
         } else {
