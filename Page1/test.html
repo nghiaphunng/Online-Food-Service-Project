@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Lọc CSS</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <button class="filter-button">Bộ Lọc</button>
+        <div class="filter-box">
+            <form>
+                <label for="product-type">Loại sản phẩm:</label>
+                <select id="product-type" name="product-type">
+                    <option value="all">Tất cả</option>
+                    <option value="electronics">Điện tử</option>
+                    <option value="fashion">Thời trang</option>
+                    <option value="books">Sách</option>
+                </select>
+                <label for="price-range">Giá:</label>
+                <select id="price-range" name="price-range">
+                    <option value="0-30">0-30</option>
+                    <option value="30-50">30-50</option>
+                    <option value="50-100">50-100</option>
+                </select>
+                <button type="submit">Áp dụng</button>
+            </form>
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
