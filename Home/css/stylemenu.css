@@ -1,0 +1,103 @@
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.navbar-menu .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6600;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu .location-menu select {
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.navbar-menu .typefood-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 20px;
+}
+
+.navbar-menu .typefood-menu ul li {
+    margin: 0 10px;
+}
+
+.navbar-menu .typefood-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    padding: 5px 10px;
+}
+
+.navbar-menu .typefood-menu ul li a:hover {
+    color: #ff6600;
+}
+
+.navbar-menu .right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .search-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar-menu .search-menu input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+.navbar-menu .search-menu button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-menu .cart-menu a, 
+.navbar-menu .login-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.navbar-menu .cart-menu a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .cart-menu a .fa {
+    margin-right: 5px;
+}
