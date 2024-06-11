@@ -259,7 +259,7 @@ function createCard(item) {
     card.classList.add('card');
 
     const img = document.createElement('img');
-    img.src = item.image;
+    img.src = item.image; $()
     card.appendChild(img);
 
     const cardContent = document.createElement('div');

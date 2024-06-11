@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="test.css">
+
+</head>
+<body>
+    <nav id="menu" class="navbar-menu"> 
+        <div class="logo">
+            <a href="trang-chu"><img alt="error" src="${path}/img/logo/logo_noback.png">KaiTsukiFood</a>
+        </div>
+        
+        <div class="location-menu">
+            <select name="search_scope" onchange="SearchNameCourse(document.search_form.search.value, document.search_form.search_scope.value)">
+                <option value="0">Khu vực</option>
+                <option value="1">Ba Đình</option>
+                <!-- Add more options if needed -->
+            </select>
+        </div>
+        
+        <div class="typefood-menu">
+            <ul>
+                <li><a href="FoodForward">Đồ ăn</a></li>
+                <li><a href="DrinkForward">Đồ uống</a></li>
+            </ul>
+        </div>
+            
+        <div class="search-menu">
+            <form name="search_form" onsubmit="return false;">
+                <input type="text" placeholder="Tìm kiếm..." name="search" oninput="SearchNameCourse(this.value, document.search_form.search_scope.value)">
+                <button type="button"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <div class="cart-menu">
+            <a href="cart">Trạng Thái</a>
+        </div>
+        
+        <div class="login-menu">
+            <a href="LoginForward">Trang chủ</a>
+        </div>
+
+        <div class="logout-menu">
+            <a href="LogoutController">Đăng xuất</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="restaurant">
+            <div class="restaurant-name">Nhà hàng 1</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody class="item">
+                    <!-- Add rows for items in restaurant 1 -->
+                    <tr>
+                        <td>Dish 1</td>
+                        <td><img src="image-url" alt="Dish 1" width="50"></td>
+                        <td>100000</td>
+                        <td>
+                            <div class="quantity-controls">
+                                <button class="decrease-qty">-</button>
+                                <input type="text" value="1" readonly>
+                                <button class="increase-qty">+</button>
+                            </div>
+                        </td>
+                        <td class="item-total">100000</td>
+                        <td><button class="delete-btn">xóa</button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            <div class="total-price-container">
+                <a href="#"><button class="checkout-btn">Thanh toán</button></a>
+                <strong>Tổng Giá: <span class="totalPrice">0</span></strong>
+            </div>
+        </div>
+        <div class="restaurant">
+            <div class="restaurant-name">Nhà hàng 2</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody class="item">
+                    <!-- Add rows for items in restaurant 2 -->
+                    <tr>
+                        <td>Dish 2</td>
+                        <td><img src="image-url" alt="Dish 2" width="50"></td>
+                        <td>200000</td>
+                        <td>
+                            <div class="quantity-controls">
+                                <button class="decrease-qty">-</button>
+                                <input type="text" value="1" readonly>
+                                <button class="increase-qty">+</button>
+                            </div>
+                        </td>
+                        <td class="item-total">200000</td>
+                        <td><button class="delete-btn">xóa</button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            <div class="total-price-container">
+                <a href="#"><button class="checkout-btn">Thanh toán</button></a>
+                <strong>Tổng Giá: <span class="totalPrice">0</span></strong>
+            </div>
+        </div>
+        <div class="restaurant">
+            <div class="restaurant-name">Nhà hàng 2</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody class="item">
+                    <!-- Add rows for items in restaurant 2 -->
+                    <tr>
+                        <td>Dish 2</td>
+                        <td><img src="image-url" alt="Dish 2" width="50"></td>
+                        <td>200000</td>
+                        <td>
+                            <div class="quantity-controls">
+                                <button class="decrease-qty">-</button>
+                                <input type="text" value="1" readonly>
+                                <button class="increase-qty">+</button>
+                            </div>
+                        </td>
+                        <td class="item-total">200000</td>
+                        <td><button class="delete-btn">xóa</button></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            <div class="total-price-container">
+                <a href="#"><button class="checkout-btn">Thanh toán</button></a>
+                <strong>Tổng Giá: <span class="totalPrice">0</span></strong>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const increaseButtons = document.querySelectorAll('.increase-qty');
+            const decreaseButtons = document.querySelectorAll('.decrease-qty');
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+            const totalPriceElements = document.querySelectorAll('.totalPrice');
+            
+            function formatCurrency(number) {
+                return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(number);
+            }
+
+            function parseCurrency(currency) {
+                return parseInt(currency.replace(/\./g, ''));
+            }
+
+            function updateTotalPrice(container) {
+                let total = 0;
+                const itemTotals = container.querySelectorAll('.item-total');
+                itemTotals.forEach(itemTotal => {
+                    total += parseCurrency(itemTotal.textContent);
+                });
+                container.querySelector('.totalPrice').textContent = formatCurrency(total);
+            }
+
+            increaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    let input = this.previousElementSibling;
+                    let quantity = parseInt(input.value);
+                    quantity += 1;
+                    input.value = quantity;
+                    let price = parseCurrency(this.closest('tr').querySelector('td:nth-child(3)').textContent);
+                    this.closest('tr').querySelector('.item-total').textContent = formatCurrency(price * quantity);
+                    updateTotalPrice(this.closest('.restaurant'));
+                });
+            });
+
+            decreaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    let input = this.nextElementSibling;
+                    let quantity = parseInt(input.value);
+                    if (quantity > 1) {
+                        quantity -= 1;
+                        input.value = quantity;
+                        let price = parseCurrency(this.closest('tr').querySelector('td:nth-child(3)').textContent);
+                        this.closest('tr').querySelector('.item-total').textContent = formatCurrency(price * quantity);
+                        updateTotalPrice(this.closest('.restaurant'));
+                    }
+                });
+            });
+
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('tr').remove();
+                    updateTotalPrice(this.closest('.restaurant'));
+                });
+            });
+
+            totalPriceElements.forEach(totalPriceElement => {
+                updateTotalPrice(totalPriceElement.closest('.restaurant'));
+            });
+        });
+    </script>
+</body>
+</html>

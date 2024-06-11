@@ -100,7 +100,11 @@ main .filter {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 5px 2px 5px rgba(0,0,0,0.1);
+    height: 320px;
+    width: 210px;
+    margin-top: 20px;
+    margin: 38px;
 }
 
 .card img {
@@ -241,7 +245,7 @@ main .filter {
 main .results {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-    gap: 15px;
+    gap: 20px;
 }
 
 

@@ -1,0 +1,82 @@
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    height: 70px;
+    
+}
+.navbar-menu img {
+    margin-left: 5%;
+}
+
+.navbar-menu .location-menu select {
+    padding: 4px;
+    font-size: 16px;
+    margin-left: -120px;
+    float: left;
+}
+
+.navbar-menu .typefood-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: -180px;
+    float: left;
+}
+.navbar-menu .typefood-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.navbar-menu .typefood-menu ul li a:hover {
+    color: #ffffff;
+}
+.navbar-menu .search-menu{
+    margin: auto;
+}
+.navbar-menu .search-menu input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  
+}
+
+.navbar-menu .search-menu button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30%;
+    padding: 5px;
+}
+.navbar-menu .cart-login-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar-menu .cart-login-menu a{
+    margin: 10px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #ffffff;
+}
+.navbar-menu .fa{
+    margin-right: 5px;
+}
+.navbar-menu .location-menu {
+    border-radius: 10px;
+}
+
+
+

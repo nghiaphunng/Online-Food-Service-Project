@@ -1,0 +1,178 @@
+.navbar-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.navbar-menu .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6600;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-menu .location-menu select {
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.navbar-menu .typefood-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 20px;
+}
+
+.navbar-menu .typefood-menu ul li {
+    margin: 0 10px;
+}
+
+.navbar-menu .typefood-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    padding: 5px 10px;
+}
+
+.navbar-menu .typefood-menu ul li a:hover {
+    color: #ff6600;
+}
+
+.navbar-menu .right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .search-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar-menu .search-menu input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+.navbar-menu .search-menu button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-menu .cart-menu a, 
+.navbar-menu .login-menu a, 
+.navbar-menu .logout-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.navbar-menu .cart-menu a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .cart-menu a .fa {
+    margin-right: 5px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .main{
+            margin-top: 100px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .delete-btn {
+            background-color: #b54dff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #ae00cd;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .quantity-controls button {
+            width: 30px;
+            height: 30px;
+            color: #f2f2f2;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #b54dff;
+        }
+        .restaurant-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .total-price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+        .checkout-btn {
+            background-color: #b54dff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        .checkout-btn:hover {
+            background-color: #ae00cd;
+        }
+
+        .input{
+            border-radius: 20px;
+          
+        }
