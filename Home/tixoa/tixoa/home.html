@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="icon" type="image/x-icon" href="${path}/img/logo/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylehome.css">
+
+</head>
+
+<body>
+    <nav id="menu" class="navbar-menu">
+        <div class="logo">
+            <a href="trang-chu"><img alt="" src="${path}/img/logo/logo_noback.png">KaiTsukiFood</a>
+        </div>
+
+        <div class="location-menu">
+            <select name="search_scope"
+                onchange="SearchNameCourse(document.search_form.search.value, document.search_form.search_scope.value)">
+                <option value="0">Khu vực</option>
+                <option value="1">Ba Đình</option>
+                <option value="2">Hà Đông</option>
+                <option value="3">Hoàng Mai</option>
+                <option value="4">Thanh Xuân</option>
+                <option value="5">Thanh Trì</option>
+                <option value="6">Nam Từ Liêm</option>
+                <option value="7">Cầu Giấy</option>
+                <option value="8">Hai Bà Trưng</option>
+                <option value="9">Long Biên</option>
+                <option value="10">Gia Lâm</option>
+                <option value="11">Thường Tín</option>
+                <option value="12">Đống Đa</option>
+                <option value="13">Hoàn Kiếm</option>
+                <option value="14">Tây Hồ</option>
+                <option value="15">Hoài Đức</option>
+                <option value="16">Bắc Từ Liêm</option>
+            </select>
+        </div>
+
+        <div class="typefood-menu">
+            <ul>
+                <li><a href="FoodForward">Đồ ăn</a></li>
+                <li><a href="DrinkForward">Đồ uống</a></li>
+            </ul>
+        </div>
+
+        <div class="search-menu">
+            <form name="search_form" onsubmit="return false;">
+                <input type="text" placeholder="Tìm kiếm..." name="search"
+                    oninput="SearchNameCourse(this.value, document.search_form.search_scope.value)">
+                <button type="button"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="cart-menu">
+            <a href="cart"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
+        </div>
+
+        <div class="login-menu">
+            <a href="LoginForward">Đăng nhập</a>
+        </div>
+
+        <div class="logout-menu">
+            <a href="LogoutController">Đăng xuất</a>
+        </div>
+    </nav>
+
+    <div id="main" style="margin-top: 70px;margin-left:50px;">
+
+        <button class="filter-button">Bộ Lọc</button>
+
+        <div class="filter-box" id="filterBox">
+            <form>
+                <label for="price-range">Giá:</label>
+                <select id="price-range" name="price-range">
+                    <option value="0-30">0-30</option>
+                    <option value="30-50">30-50</option>
+                    <option value="50-100">50-100</option>
+                </select>
+
+                <label for="type">Loại:</label>
+                <select id="type" name="type">
+                    <option value="all">Tất cả</option>
+                    <option value="food">Đồ ăn</option>
+                    <option value="drink">Đồ uống</option>
+                </select>
+                <button type="submit">Áp dụng</button>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="now-list-restaurant">
+        <div class="list-restaurant">
+
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            
+                            <h4 class="name-res">Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-retaurant">
+                <a target="_blank" class="item-content" href="">
+                    <div class="img-restaurant">
+                        <div class="tooltip">
+                            <img class="cover" src="image.png" alt="" style="width:300px;height:200px; border-radius: 6px 6px 0 0; border: 1px solid #524f4f;">
+                            <span class="tooltiptext">Tooltip text
+                            </span>
+                        </div>
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <h4 class="name-res">Circle K - Bia Lạnh Các Loại - 380 Khâm Thiên - HN2163</h4>
+                            <div class="address-res" title="des">380 Khâm Thiên, P. Khâm Thiên, Đống Đa, Hà Nội</div>
+                        </div>
+                        <p class="price">??.000d</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="pageone.js"></script>
+
+</body>
+
+</html>
