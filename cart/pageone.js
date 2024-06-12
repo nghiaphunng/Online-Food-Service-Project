@@ -1,4 +1,7 @@
 // script.js
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const filterButton = document.querySelector('.filter-button');
     const filterBox = document.querySelector('.filter-box');
@@ -22,3 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 });
+
+// Sự kiện click cho nút giỏ hàng
+
+
+
+
