@@ -64,26 +64,26 @@ function addcart(productImg, productName, productPrice, ResName) {
         </tr>`;
     restaurantSection.querySelector('tbody').appendChild(newProduct);
 
-    // Update total price for the product
+
     updateTotalPrice(newProduct);
 
-    // Add event listener for quantity change
+  
     newProduct.querySelector('.quantity').addEventListener('change', function(event) {
         updateTotalPrice(newProduct);
         updateRestaurantTotal(restaurantSection);
     });
 
-    // Add event listener for remove button
+
     newProduct.querySelector('.remove-button').addEventListener('click', function(event) {
         newProduct.remove();
         updateRestaurantTotal(restaurantSection);
-        // If no more products in restaurant section, remove the restaurant section
+        
         if (restaurantSection.querySelector('tbody').children.length === 0) {
             restaurantSection.remove();
         }
     });
 
-    // Update the restaurant total after adding a new product
+  
     updateRestaurantTotal(restaurantSection);
 }
 
