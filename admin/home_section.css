@@ -1,0 +1,40 @@
+.home_section {
+    position: relative;
+    width: calc(100% - 200px);
+    min-height: 100vh;
+    left: 200px;
+    top: 0;
+    background: #E4E9E7;
+    transition: all 0.5s ease;
+  }
+  
+  .home_section .topbar {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--white);
+  }
+  .home_section .user_wrapper img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+  }
+  .home_section .logOut a {
+    text-decoration: none;
+  }
+  .home_section .user_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .home_section .user_wrapper h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+  

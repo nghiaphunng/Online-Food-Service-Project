@@ -1,0 +1,25 @@
+.main-quanlyU table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  .main-quanlyU th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .main-quanlyU th {
+    background-color: #f2f2f2;
+  }
+  .main-quanlyU .remove-button {
+    background-color: #ff6851;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .main-quanlyU .remove-button:hover {
+    background-color: #ff5237;
+  }

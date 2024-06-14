@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Admin & Dashboard</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="errU.css">
+  <link rel="stylesheet" href="err.css">
+  <link rel="stylesheet" href="home_section.css">
+  <link rel="stylesheet" href="res.css">
+  <link rel="stylesheet" href="tbtoUser.css">
+  <link rel="stylesheet" href="user.css">
+  <link rel="stylesheet" href="filterUser.css">
+  <link rel="stylesheet" href="tongquan.css">
   <!-- box icon -->
 
 </head>
@@ -52,6 +60,14 @@
       </li>
       <li>
         <a href="#">
+          <i class='bx bxs-truck'></i>
+          <span class="links_name">
+            Thông báo lỗi từ người dùng
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
           <i class='bx bx-dollar' ></i>
           <span class="links_name">
             Thông báo người dùng
@@ -66,6 +82,7 @@
     <div class="topbar">
       <div class="user_wrapper">
         <img src="img/user.jpg" alt="">
+        <h3>Hello, Tên</h3>
       </div>
       <div class="logOut">
         <a href="#">Đăng xuất</a>
@@ -79,9 +96,41 @@
         <div class="tq">
           <h1>Số lượng nhà hàng: 5000</h1>
         </div>
+        <div class="tq">
+          <h1>Số lượng nhà hàng: 5000</h1>
+        </div>
+        <div class="tq">
+          <h1>Số lượng nhà hàng: 5000</h1>
+        </div>
+        <div class="tq">
+          <h1>Số lượng nhà hàng: 5000</h1>
+        </div>
+        <div class="tq">
+          <h1>Số lượng nhà hàng: 5000</h1>
+        </div>
+        <div class="tq">
+          <h1>Số lượng nhà hàng: 5000</h1>
+        </div>
       </div>
     </div>
     <div class="quan-ly-user">
+      <div class="filter-section">
+        <form id="filter-form">
+          <label for="search-name">Tên:</label>
+          <input type="text" id="search-name" name="name" placeholder="Nhập tên...">
+          
+          <label for="sort-order">Sắp xếp:</label>
+          <select id="sort-order" name="sort">
+            <option value="newest">Mới nhất</option>
+            <option value="oldest">Sớm nhất</option>
+          </select>
+          
+          <label for="record-count">Số lượng bản ghi:</label>
+          <input type="number" id="record-count" name="recordCount" min="1" placeholder="Số lượng bản ghi">
+          
+          <button type="submit">Lọc</button>
+        </form>
+      </div>
       <div class="main-quanlyU" id="main-quanlyU">
         <table>
           <thead>
@@ -90,13 +139,15 @@
               <th>Email</th>
               <th>Số điện thoại</th>
               <th>Giới tính</th>
-              <th>Hành động</th>
+              <th>Xóa tài khoản</th>
+              <th>Xóa lịch sử đặt hàng</th>
             </tr>
             <tr>
               <td>Nguyễn Văn A</td>
               <td>a@gmail.com</td>
               <td>0345067688</td>
               <td>Nam</td>
+              <td><button class="remove-button">Xóa</button></td>
               <td><button class="remove-button">Xóa</button></td>
             </tr>
             <tr>
@@ -133,7 +184,7 @@
               <th>Email</th>
               <th>Số điện thoại</th>
               <th>Địa chỉ</th>
-              <th>Hành động</th>
+              <th>Xóa tài khoản</th>
             </tr>
             <tr>
               <td>Nguyễn Văn A</td>
@@ -200,6 +251,28 @@
         </table>
       </div>
     </div>
+    <div class="quan-ly-errU">
+      <div class="main-errU" id="main-errU">
+        <table>
+          <thead>
+            <tr>
+              <th>Tên người dùng</th>
+              <th>Tên đăng nhập</th>
+              <th>Vấn đề</th>
+              <th>Thời gian gửi</th>
+              <th>Trạng thái xử lý</th>
+            </tr>
+            <tr>
+              <td>Nguyễn Văn A</td>
+              <td>ahsjaks</td>
+              <td>àbjsnfkskd</td>
+              <td>09/03/2024</td>
+              <td>Chưa xử lý</td>
+            </tr>
+        </thead>
+        </table>
+      </div>
+    </div>
     <div class="thong-bao-user">
       
 
@@ -221,10 +294,11 @@
 
 </body>
 <script>
-        document.querySelector(".tong-quan").style.display = "none";
+  document.querySelector(".tong-quan").style.display = "block";
   document.querySelector(".quan-ly-user").style.display = "none";
   document.querySelector(".quan-ly-res").style.display = "none";
   document.querySelector(".quan-ly-err").style.display = "none";
+  document.querySelector(".quan-ly-errU").style.display = "none";
   document.querySelector(".thong-bao-user").style.display = "none";
 document.addEventListener("DOMContentLoaded", function() {
   const links = document.querySelectorAll(".sidebar li a");
@@ -249,31 +323,43 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".quan-ly-user").style.display = "none";
         document.querySelector(".quan-ly-res").style.display = "none";
         document.querySelector(".quan-ly-err").style.display = "none";
+        document.querySelector(".quan-ly-errU").style.display = "none";
         document.querySelector(".thong-bao-user").style.display = "none";
       } else if (linkText === "Quản lý khách hàng") {
         document.querySelector(".tong-quan").style.display = "none";
         document.querySelector(".quan-ly-user").style.display = "block";
         document.querySelector(".quan-ly-res").style.display = "none";
         document.querySelector(".quan-ly-err").style.display = "none";
+        document.querySelector(".quan-ly-errU").style.display = "none";
         document.querySelector(".thong-bao-user").style.display = "none";
       } else if (linkText === "Quản lý nhà hàng") {
         document.querySelector(".tong-quan").style.display = "none";
         document.querySelector(".quan-ly-user").style.display = "none";
         document.querySelector(".quan-ly-res").style.display = "block";
         document.querySelector(".quan-ly-err").style.display = "none";
+        document.querySelector(".quan-ly-errU").style.display = "none";
         document.querySelector(".thong-bao-user").style.display = "none";
       } else if (linkText === "Thông báo lỗi") {
         document.querySelector(".tong-quan").style.display = "none";
         document.querySelector(".quan-ly-user").style.display = "none";
         document.querySelector(".quan-ly-res").style.display = "none";
         document.querySelector(".quan-ly-err").style.display = "block";
+        document.querySelector(".quan-ly-errU").style.display = "none";
         document.querySelector(".thong-bao-user").style.display = "none";
       } else if (linkText === "Thông báo người dùng") {
         document.querySelector(".tong-quan").style.display = "none";
         document.querySelector(".quan-ly-user").style.display = "none";
         document.querySelector(".quan-ly-res").style.display = "none";
         document.querySelector(".quan-ly-err").style.display = "none";
+        document.querySelector(".quan-ly-errU").style.display = "none";
         document.querySelector(".thong-bao-user").style.display = "block";
+      } else if (linkText === "Thông báo lỗi từ người dùng") {
+        document.querySelector(".tong-quan").style.display = "none";
+        document.querySelector(".quan-ly-user").style.display = "none";
+        document.querySelector(".quan-ly-res").style.display = "none";
+        document.querySelector(".quan-ly-err").style.display = "none";
+        document.querySelector(".quan-ly-errU").style.display = "block";
+        document.querySelector(".thong-bao-user").style.display = "none";
       }
     });
   });
