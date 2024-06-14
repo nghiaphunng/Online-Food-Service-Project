@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="icon" type="image/x-icon" href="${path}/img/logo/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="addPro.css">
+    <link rel="stylesheet" href="res.css">
+</head>
+
+<body>
+    <nav id="menu" class="navbar-menu">
+        <div class="logo">KaiTsukiFood</div>
+    </nav>
+    <button id="btn-open" >
+        Thêm món ăn
+    </button>
+    <br>
+    <br>
+    
+    <div class="modal-container" id="modal-container" >
+        <div id="modal">
+            <div class="modal-header" id="modal-header">
+                <h3>Thêm món ăn</h3>
+                <button class="close"><i id="btn-close" class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <label for="name">Tên món:</label>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="des">Mô tả:</label>
+                    <input type="text" id="des" name="des"><br>
+                    <label for="price">Giá:</label>
+                    <input type="text" id="price" name="price"><br>
+                    <label>Mặt hàng:</label>
+                    <select>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                    </select><br>
+                    <label for="type">Từ khóa tìm kiếm:</label>
+                    <input type="text" id="type" name="type"><br>
+                    <label for="anh">Tải ảnh minh họa:</label>
+                    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                        <label class="custom-file-upload">
+                            Chọn tệp
+                            <input type="file" id="fileInput" name="image" accept="image/*">
+                        </label>
+                        <br><br>
+                        <button type="submit">Tải lên</button>
+                    </form>
+                    <p id="error-message">Vui lòng chọn một tệp trước khi tải lên.</p>
+                    <label for="soluong">Số lượng:</label>
+                    <input type="text" id="soluong" name="soluong"><br><br>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            
+            </div>
+        </div>
+
+    </div>
+    <div class="now-list-restaurant" id="now-list-restaurant">
+        <div class="list-restaurant">
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-restaurant">
+                <div class="item-content">
+                    <div class="img-restaurant">
+                        <img class="cover" src="image.png" alt="">
+                    </div>
+                    <div class="info-restaurant">
+                        <div class="info-basic-res">
+                            <div class="name-res"
+                                title="Circle K - Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163">Circle K -
+                                Biaaaaaaaaa Lạnh Các Loại - 380 Khâm Thiên - HN2163</div>
+                            <div class="address-res">Số lượng có thể đáp ứng:</div>
+                        </div>
+                        <div class="inf">
+                            <button class="price-button">???.000D</button>
+                            <button class="fix-button">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script src="submit.js"></script>
+</body>
+
+</html>
