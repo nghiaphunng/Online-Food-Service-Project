@@ -1,0 +1,38 @@
+.main-infoUser {
+    background: white;
+    margin-top: 5%;
+    margin-left: 24%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 550px;
+    text-align: center;
+}
+.main-infoUser img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 3px solid #ff6851;
+}
+.main-infoUser input, .main-infoUser select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.main-infoUser button {
+    background-color: #ff6851;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.main-infoUser button:hover {
+    background-color: #f9462b;
+}

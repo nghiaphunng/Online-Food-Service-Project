@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung tâm điều khiển</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="topbar.css">
+  <link rel="stylesheet" href="thongbaoto.css">
+  <link rel="stylesheet" href="infoUser.css">
+  <link rel="stylesheet" href="changePass.css">
+  <link rel="stylesheet" href="thongbaofrom.css">
+  <link rel="stylesheet" href="lichsu.css">
+  <!-- box icon -->
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      
+<div class="logo_name">
+        Cài đặt
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#" class="active">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">
+            Thông tin tài khoản
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">
+            Thay đổi mật khẩu
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">
+            Thông báo từ hệ thống
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-truck'></i>
+          <span class="links_name">
+            Gửi thông báo tới hệ thống
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-dollar' ></i>
+          <span class="links_name">
+            Lịch sử đơn hàng
+          </span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <!-- End Sideber -->
+  <section class="home_section">
+    <div class="topbar">
+        <div class="user_wrapper">
+            <img src="img/user.jpg" alt="">
+            <h3>Hello, Tên</h3>
+        </div>
+        <div class="chung">
+            <div class="khohang">
+                <a href="#">Kho hàng</a>
+            </div>
+            <div class="logOut">
+                <a href="#">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="infoUser">
+      <div class="main-infoUser" id="main-infoUser">
+        <form>
+            <label for="avatar">
+                <img id="avatarPreview" src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474094mGh/avatar-anime-nam-co-don-dep_085121210.jpg" alt="Avatar">
+                <h5>Tải ảnh lên</h5>
+            </label>
+            <!-- input type file cho ảnh ở đây nhé, viết vào thì viết ở input dưới -->
+            <input type="file" id="avatar" style="display: none;" accept="image/*">
+            <input type="text" placeholder="Tên người dùng" required>
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <input type="text" placeholder="Địa chỉ" required>
+            <input type="text" placeholder="Số điện thoại" required>
+            <select>
+                <option value="" disabled selected>Giới tính</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select>
+            <input type="password" placeholder="Nhập mật khẩu xác nhận" required>
+            <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+    <div class="changePass">
+      <div class="main-changePass" id="main-changePass">
+        <form>
+            <input type="text" placeholder="Nhập mật khẩu cũ" required>
+            <input type="text" placeholder="Nhập mật khẩu mới" required>
+            <input type="text" placeholder="Xác nhận mật khẩu" required>
+            <button type="submit">Xác nhận</button>
+        </form>
+      </div>
+    </div>
+    <div class="thongbaofrom">
+      <div class="main-thongbaofrom" id="main-thongbaofrom">
+        <table>
+            <thead>
+              <tr>
+                <th>Nội dung</th>
+                <th>Thời gian gửi</th>
+                <th>Trạng thái xử lý</th>
+              </tr>
+              <tr>
+                <td>Nguyễn Văn A</td>
+                <td>09/03/2024</td>
+                <td>Chưa xử lý</td>
+              </tr>
+          </thead>
+          </table>
+      </div>
+    </div>
+    <div class="thongbaoto">
+      <div class="main-thongbaoto" id="main-thongbaoto">
+        <form id="notification-form">
+            <div class="form-group">
+              <label for="topic">Chủ đề:</label>
+              <input type="text" id="topic" name="topic" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Nội dung:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Gửi thông báo</button>
+            </div>
+          </form>
+      </div>
+    </div>
+
+    <div class="lichsu">
+        <div class="main-lichsu">
+            <div class="item">
+            <h3>Tên nhà hàng</h3>
+            <table>
+            <thead>
+                <tr>
+                    <th>Tên người dùng</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                </tr>
+                <tr>
+                    <td>âsasasa</td>
+                    <td><img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474094mGh/avatar-anime-nam-co-don-dep_085121210.jpg" alt="Anh" width="50"></td>
+                    <td>âsassdsafdaf</td>
+                    <td>3</td>
+                    <td>500000d</td>
+                    <td>Đang xu ly</td>
+                </tr>
+                <tr>
+                    <td>âsasasa</td>
+                    <td><img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474094mGh/avatar-anime-nam-co-don-dep_085121210.jpg" alt="Anh" width="50"></td>
+                    <td>âsassdsafdaf</td>
+                    <td>3</td>
+                    <td>500000d</td>
+                    <td>Dang giao</td>
+                </tr>
+                <tr>
+                    <td>âsasasa</td>
+                    <td><img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474094mGh/avatar-anime-nam-co-don-dep_085121210.jpg" alt="Anh" width="50"></td>
+                    <td>âsassdsafdaf</td>
+                    <td>3</td>
+                    <td>500000d</td>
+                    <td>Đa giao</td>
+                </tr>
+                </thead>
+            
+                </table>
+            </div>
+            <div class="item">
+                <h3>ABC</h3>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Tên người dùng</th>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>âsasasa</td>
+                        <td><img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474094mGh/avatar-anime-nam-co-don-dep_085121210.jpg" alt="Anh" width="50"></td>
+                        <td>âsassdsafdaf</td>
+                        <td>3</td>
+                        <td>500000d</td>
+                        <td>Đang xu ly</td>
+                    </tr>
+                    </thead>
+                
+                    </table>
+                </div>
+        </div>
+    </div>
+ </section>
+
+</body>
+<script>
+    document.querySelector(".infoUser").style.display = "block";
+    document.querySelector(".changePass").style.display = "none";
+    document.querySelector(".thongbaofrom").style.display = "none";
+    document.querySelector(".thongbaoto").style.display = "none";
+    document.querySelector(".lichsu").style.display = "none";
+  document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".sidebar li a");
+  
+    links.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+  
+        // Remove active class from currently active link
+        const currentActive = document.querySelector(".sidebar li a.active");
+        if (currentActive) {
+          currentActive.classList.remove("active");
+        }
+  
+        // Add active class to clicked link
+        link.classList.add("active");
+  
+        // Determine which section to display based on link text
+        const linkText = link.querySelector(".links_name").textContent.trim();
+        if (linkText === "Thông tin tài khoản") {
+          document.querySelector(".infoUser").style.display = "block";
+          document.querySelector(".changePass").style.display = "none";
+          document.querySelector(".thongbaofrom").style.display = "none";
+          document.querySelector(".thongbaoto").style.display = "none";
+          document.querySelector(".lichsu").style.display = "none";
+        } else if (linkText === "Thay đổi mật khẩu") {
+          document.querySelector(".infoUser").style.display = "none";
+          document.querySelector(".changePass").style.display = "block";
+          document.querySelector(".thongbaofrom").style.display = "none";
+          document.querySelector(".thongbaoto").style.display = "none";
+    
+          document.querySelector(".lichsu").style.display = "none";
+        } else if (linkText === "Thông báo từ hệ thống") {
+          document.querySelector(".infoUser").style.display = "none";
+          document.querySelector(".changePass").style.display = "none";
+          document.querySelector(".thongbaofrom").style.display = "block";
+          document.querySelector(".thongbaoto").style.display = "none";
+    
+          document.querySelector(".lichsu").style.display = "none";
+        } else if (linkText === "Gửi thông báo tới hệ thống") {
+          document.querySelector(".infoUser").style.display = "none";
+          document.querySelector(".changePass").style.display = "none";
+          document.querySelector(".thongbaofrom").style.display = "none";
+          document.querySelector(".thongbaoto").style.display = "block";
+    
+          document.querySelector(".lichsu").style.display = "none";
+        } 
+        else if (linkText === "Lịch sử đơn hàng") {
+          document.querySelector(".infoUser").style.display = "none";
+          document.querySelector(".changePass").style.display = "none";
+          document.querySelector(".thongbaofrom").style.display = "none";
+          document.querySelector(".thongbaoto").style.display = "none";
+         
+          document.querySelector(".lichsu").style.display = "block";
+        }
+      });
+    });
+  });
+  
+  </script>
+</html>
