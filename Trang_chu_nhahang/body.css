@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: visible;
+    /* Giữ thanh cuộn dọc */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+
+
+.left {
+    width: 15%;
+    left: 0;
+}
+
+.center {
+    width: 70%;
+    left: 15%;
+}
+
+.right {
+    width: 15%;
+    right: 0;
+}
+
+
+
+.food_item {
+    text-align: center;
+    flex: 1 20%;
+    max-width: 20%;
+    box-sizing: border-box;
+}
+
+.food_img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.food_title {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+.food_desc {
+    margin: 0px 10px 20px 10px;
+}
+
+
+
+.now-list-restaurant {
+
+    border-radius: 6px;
+    margin: 30px;
+    position: relative;
+
+
+}
+
+.now-list-restaurant .list-restaurant {
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+.now-list-restaurant .item-content {
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    margin: 30px;
+}
+
+.now-list-restaurant .img-restaurant {
+
+    border-radius: 6px 6px 0 0;
+
+}
+
+.cover {
+    object-fit: cover;
+}
+
+
+
+.now-list-restaurant .info-restaurant {
+    margin-top: -5px;
+    border: 1px solid #524f4f;
+    border-radius: 0 0 6px 6px;
+    height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 230px;
+
+}
+
+.now-list-restaurant .info-basic-res {
+
+    border-bottom: 1px solid #ebebeb;
+    padding: 0px;
+}
+
+.now-list-restaurant .info-restaurant .name-res {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #252525;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+
+.now-list-restaurant .info-restaurant .address-res {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #959595;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+
+.inf {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-button {
+    margin-top: -1px;
+    font-size: 12px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    margin-left: 28px;
+    text-align: center;
+    background-color: white;
+    height: 22px;
+}
+
+.price-button {
+    margin-top: -1px;
+    margin-left: 5px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    height: 22px;
+    background-color: white;
+
+}
+.now-detail-restaurant {
+    background-color: #fff;
+    padding-top: 30px;
+}
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
+.now-detail-restaurant .detail-restaurant-img {
+    width: 480px;
+    height: 300px;
+    position: relative;
+    float: left;
+}
+.now-detail-restaurant .detail-restaurant-img img {
+    width: 90%;
+    height: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    border-radius:5px;
+}
+.now-detail-restaurant .detail-restaurant-info {
+    color: #252525;
+    float: right;
+    width: 645px;
+    padding-bottom: 15px;
+}
+.name-restaurant {
+    font-size: 50px; 
+    color: #ff6600; 
+}
+ .address-restaurant {
+    font-size: 16px;
+    color: black;
+}
+.total-amount{
+    font-size: 16px;
+    color: black;
+}
+.space{
+    margin-top:50px;
+    padding: 20px;
+    margin-right:80px;
+}
+
+.title-menu {
+    font-size:25px;
+    font-weight:300;
+    text-transform: uppercase;
+    color: #ff6600;
+    margin-top:30px;
+    margin-bottom:-30px;
+    margin-left:30px;
+    border-bottom: rgb(249, 62, 33) solid 2px;
+    padding:5px;
+}
+.food{
+    font-size:25px;
+    font-weight:300;
+    text-transform: uppercase;
+    color: #ff6600;
+    margin-top:50px;
+    margin-bottom:-30px;
+    margin-left:30px;
+    border-bottom: #ff6600 solid 2px;
+    padding:5px; 
+}
