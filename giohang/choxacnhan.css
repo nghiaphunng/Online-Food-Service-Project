@@ -1,0 +1,100 @@
+.choxacnhan .chogiaohang .chonhahang .thanhcong{
+    display: grid;
+    gap: 50px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+  }
+
+  .main-choxacnhan {
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-choxacnhan h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .main-choxacnhan table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .main-choxacnhan th,
+  .main-choxacnhan td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .main-choxacnhan th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .main-choxacnhan td img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .main-choxacnhan .quantity {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .main-choxacnhan .remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .main-choxacnhan .remove-button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .restaurant-total {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .total-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-left: 20px; /* Adds space between the button and the total price */
+  }
+  
+  .pay-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  .pay-button:hover {
+    background-color: #ff2525;
+  }
+  
+
+  
+
+  

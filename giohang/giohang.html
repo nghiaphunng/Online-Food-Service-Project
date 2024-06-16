@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="topbar.css">
+  <link rel="stylesheet" href="thongbaoto.css">
+  <link rel="stylesheet" href="choxacnhan.css">
+  <link rel="stylesheet" href="chonhahang.css">
+  <link rel="stylesheet" href="chogiaohang.css">
+
+  <!-- box icon -->
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      
+<div class="logo_name">
+        Giỏ Hàng
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#" class="active">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">
+            Chờ xác nhận
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">
+            Chờ nhà hàng xác nhận
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">
+            Chờ giao hàng
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-truck'></i>
+          <span class="links_name">
+            Thành công
+          </span>
+        </a>
+      </li>
+
+
+    </ul>
+
+  </div>
+  <!-- End Sideber -->
+  <section class="home_section">
+    <div class="topbar">
+        <div class="user_wrapper">
+            <img src="img/user.jpg" alt="">
+            <h3>Hello, Tên</h3>
+        </div>
+        <div class="chung">
+            <div class="khohang">
+                <a href="#">Trang chủ</a>
+            </div>
+            <div class="logOut">
+                <a href="#">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="choxacnhan">
+      <div class="main-choxacnhan" id="main-choxacnhan">
+        <h3>ABC</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng</th>
+                    <th>Hành động</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><img src="#" alt="anh" width="50"></td>
+                    <td>500000d</td>
+                    <td><input type="number" value="1" min="1" class="quantity"></td>
+                    <td class="total">500000</td>
+                    <td><button class="remove-button">Xóa</button></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><img src="#" alt="anh" width="50"></td>
+                    <td>500000d</td>
+                    <td><input type="number" value="1" min="1" class="quantity"></td>
+                    <td class="total">500000</td>
+                    <td><button class="remove-button">Xóa</button></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="restaurant-total">
+            <button class="pay-button">Xác nhận mua hàng</button>
+            <span>Tổng tiền: </span>
+            <span class="total-price">0d</span>
+            
+        </div>
+        </div>
+        <div class="main-choxacnhan" id="main-choxacnhan">
+            <h3>ABC</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành động</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000</td>
+                        <td><input type="number" value="1" min="1" class="quantity"></td>
+                        <td class="total">500000</td>
+                        <td><button class="remove-button">Xóa</button></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1" min="1" class="quantity"></td>
+                        <td class="total">500000</td>
+                        <td><button class="remove-button">Xóa</button></td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="restaurant-total">
+                <button class="pay-button">Xác nhận mua hàng</button>
+                <span>Tổng tiền: </span>
+                <span class="total-price">0d</span>
+                
+            </div>
+            </div>
+   
+    </div>
+    <div class="chonhahang">
+        <div class="main-choxacnhan" id="main-choxacnhan">
+            <h3>ABC</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đang chờ nhà hàng xác nhận</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đang chờ nhà hàng xác nhận</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="restaurant-total">
+                <button class="pay-button">Xác nhận nhận hàng</button>
+                <span>Tổng tiền: </span>
+                <span class="total-price">0d</span>
+                
+            </div>
+            </div>
+    </div>
+    <div class="chogiaohang">
+        <div class="main-choxacnhan" id="main-choxacnhan">
+            <h3>ABC</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đang giao</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đang giao</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="restaurant-total">
+                <button class="pay-button">Xác nhận thành công</button>
+                <span>Tổng tiền: </span>
+                <span class="total-price">0d</span>
+                
+            </div>
+            </div>
+           
+       
+    </div>
+    <div class="thanhcong">
+        <div class="main-choxacnhan" id="main-choxacnhan">
+            <h3>ABC</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành động</th>
+                    </tr>
+ 
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đã giao</button></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><img src="#" alt="anh" width="50"></td>
+                        <td>500000d</td>
+                        <td><input type="number" value="1"  class="quantity" readonly></td>
+                        <td class="total">500000</td>
+                        <td>Đã giao</button></td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="restaurant-total">
+               
+                <span>Tổng tiền: </span>
+                <span class="total-price">0d</span>
+                
+            </div>
+            </div>
+    </div>
+ </section>
+
+</body>
+<script>
+    document.querySelector(".choxacnhan").style.display = "block";
+    document.querySelector(".chonhahang").style.display = "none";
+    document.querySelector(".chogiaohang").style.display = "none";
+    document.querySelector(".thanhcong").style.display = "none";
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".sidebar li a");
+  
+    links.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+  
+        // Remove active class from currently active link
+        const currentActive = document.querySelector(".sidebar li a.active");
+        if (currentActive) {
+          currentActive.classList.remove("active");
+        }
+  
+        // Add active class to clicked link
+        link.classList.add("active");
+  
+        // Determine which section to display based on link text
+        const linkText = link.querySelector(".links_name").textContent.trim();
+        if (linkText === "Chờ xác nhận") {
+          document.querySelector(".choxacnhan").style.display = "block";
+          document.querySelector(".chonhahang").style.display = "none";
+          document.querySelector(".chogiaohang").style.display = "none";
+          document.querySelector(".thanhcong").style.display = "none";
+          
+        } else if (linkText === "Chờ nhà hàng xác nhận") {
+          document.querySelector(".choxacnhan").style.display = "none";
+          document.querySelector(".chonhahang").style.display = "block";
+          document.querySelector(".chogiaohang").style.display = "none";
+          document.querySelector(".thanhcong").style.display = "none";
+    
+        } else if (linkText === "Chờ giao hàng") {
+          document.querySelector(".choxacnhan").style.display = "none";
+          document.querySelector(".chonhahang").style.display = "none";
+          document.querySelector(".chogiaohang").style.display = "block";
+          document.querySelector(".thanhcong").style.display = "none";
+    
+         
+        } else if (linkText === "Thành công") {
+          document.querySelector(".choxacnhan").style.display = "none";
+          document.querySelector(".chonhahang").style.display = "none";
+          document.querySelector(".chogiaohang").style.display = "none";
+          document.querySelector(".thanhcong").style.display = "block";
+    
+        } 
+      
+      });
+    });
+  });
+
+  function calculateTotalPrice() {
+  const carts = document.querySelectorAll('.main-choxacnhan');
+  
+  carts.forEach(cart => {
+    let total = 0;
+    const rows = cart.querySelectorAll('tr');
+    
+    rows.forEach(row => {
+      const quantityInput = row.querySelector('.quantity');
+      const priceElement = row.querySelector('td:nth-child(3)');
+      const totalElement = row.querySelector('.total');
+      
+      if (quantityInput && priceElement && totalElement) {
+        const quantity = parseInt(quantityInput.value);
+        const price = parseFloat(priceElement.textContent.replace('d', '').replace(',', ''));
+        const itemTotal = quantity * price;
+        
+        total += itemTotal;
+        totalElement.textContent = itemTotal.toLocaleString() + 'd';
+      }
+    });
+
+    const totalPriceElement = cart.querySelector('.total-price');
+    totalPriceElement.textContent = total.toLocaleString() + 'd';
+  });
+}
+
+// Event listener to recalculate total when quantity changes
+document.addEventListener('DOMContentLoaded', () => {
+  const quantityInputs = document.querySelectorAll('.quantity');
+
+  quantityInputs.forEach(input => {
+    input.addEventListener('change', calculateTotalPrice);
+  });
+
+  // Initial calculation
+  calculateTotalPrice();
+});
+
+  
+  </script>
+</html>
