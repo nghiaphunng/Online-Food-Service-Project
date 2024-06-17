@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="topbar.css">
+ <link rel="stylesheet" href="danhsachsp.css">
+ <link rel="stylesheet" href="themsp.css">
+
+  <!-- box icon -->
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      
+<div class="logo_name">
+        Kho hàng
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#" class="active">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">
+            Danh sách sản phẩm
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links_name">
+            Thêm sản phẩm
+          </span>
+        </a>
+      </li>
+    </ul>
+</div>
+  <!-- End Sideber -->
+  <section class="home_section">
+    <div class="topbar">
+        <div class="user_wrapper">
+            <img src="img/user.jpg" alt="">
+            <h3>Hello, Tên</h3>
+        </div>
+        <div class="chung">
+            <div class="khohang">
+                <a href="#">Trang chủ</a>
+            </div>
+            <div class="logOut">
+                <a href="#">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="danhsachsp">
+        <div class="filter-section">
+            <form id="filter-form">
+              <label for="search-name">Tên:</label>
+              <input type="text" id="search-name" name="name" placeholder="Nhập tên...">
+              
+              <label for="sort-order">Sắp xếp:</label>
+              <select id="sort-order" name="sort">
+                <option value="newest">Bán nhiều nhất</option>
+                <option value="oldest">Bán ít nhất</option>
+              </select>
+              
+              
+              
+              <button type="submit">Lọc</button>
+            </form>
+          </div>
+      <div class="main-danhsachsp" id="main-danhsachsp">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Cập nhật</th>
+                    <th>Giá</th>
+                    <th>Số lượng đã bán</th>
+                    <th>Hàng tồn</th>
+                    <th>Mô tả</th>
+                    <th>Xóa</th>
+                    <th>Cập nhật</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name" name="name"><br></td>
+                    <td>
+                        <img src="https://i.pinimg.com/236x/cd/cb/0c/cdcb0cb30bc700c53f12eff840156b29.jpg" alt="anh" width="50" id="display-img" onclick="document.getElementById('update-img').click();">
+                        <input type="file" id="update-img" name="update-img" style="display: none;" onchange="previewImage(event)">
+                    </td>
+                    <td><button class="updateimg-button">Cập nhật</button></td>
+                    <td><input type="text" id="price" name="price"></td>
+                    <td><input type="number" value="1" min="1" class="quantity" readonly></td>
+                    <td><input type="number" value="1" min="1" class="quantity" ></td>
+                    <td><input type="text" id="des" name="des"><br></td>
+                    <td><button class="remove-button">Xóa</button></td>
+                    <td><button class="update-button">Cập nhật</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name" name="name"><br></td>
+                    <td>
+                        <img src="https://i.pinimg.com/236x/cd/cb/0c/cdcb0cb30bc700c53f12eff840156b29.jpg" alt="anh" width="50" id="display-img" onclick="document.getElementById('update-img').click();">
+                        <input type="file" id="update-img" name="update-img" style="display: none;" onchange="previewImage(event)">
+                    </td>
+                    <td><button class="updateimg-button">Cập nhật</button></td>
+                    <td><input type="text" id="price" name="price"></td>
+                    <td><input type="number" value="1" min="1" class="quantity" readonly></td>
+                    <td><input type="number" value="1" min="1" class="quantity" ></td>
+                    <td><input type="text" id="des" name="des"><br></td>
+                    <td><button class="remove-button">Xóa</button></td>
+                    <td><button class="update-button">Cập nhật</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name" name="name"><br></td>
+                    <td>
+                        <img src="https://i.pinimg.com/236x/cd/cb/0c/cdcb0cb30bc700c53f12eff840156b29.jpg" alt="anh" width="50" id="display-img" onclick="document.getElementById('update-img').click();">
+                        <input type="file" id="update-img" name="update-img" style="display: none;" onchange="previewImage(event)">
+                    </td>
+                    <td><button class="updateimg-button">Cập nhật</button></td>
+                    <td><input type="text" id="price" name="price"></td>
+                    <td><input type="number" value="1" min="1" class="quantity" readonly></td>
+                    <td><input type="number" value="1" min="1" class="quantity" ></td>
+                    <td><input type="text" id="des" name="des"><br></td>
+                    <td><button class="remove-button">Xóa</button></td>
+                    <td><button class="update-button">Cập nhật</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="name" name="name"><br></td>
+                    <td>
+                        <img src="https://i.pinimg.com/236x/cd/cb/0c/cdcb0cb30bc700c53f12eff840156b29.jpg" alt="anh" width="50" id="display-img" onclick="document.getElementById('update-img').click();">
+                        <input type="file" id="update-img" name="update-img" style="display: none;" onchange="previewImage(event)">
+                    </td>
+                    <td><button class="updateimg-button">Cập nhật</button></td>
+                    <td><input type="text" id="price" name="price"></td>
+                    <td><input type="number" value="1" min="1" class="quantity" readonly></td>
+                    <td><input type="number" value="1" min="1" class="quantity" ></td>
+                    <td><input type="text" id="des" name="des"><br></td>
+                    <td><button class="remove-button">Xóa</button></td>
+                    <td><button class="update-button">Cập nhật</button></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+    </div>
+    <div class="themsp">
+        <div class="modal-container" id="modal-container">
+            <div id="modal">
+                <div class="modal-header" id="modal-header">
+                    <h3>Thêm món ăn</h3>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="name">Tên món:</label>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="des">Mô tả:</label>
+                        <input type="text" id="des" name="des"><br>
+                        <label for="price">Giá:</label>
+                        <input type="text" id="price" name="price"><br>
+                        <label>Mặt hàng:</label>
+                        <select>
+                            <option> Đồ ăn </option>
+                            <option> Đồ uống </option>
+                            <option> Combo </option>
+                        </select><br>
+                        <label for="type">Từ khóa tìm kiếm:</label>
+                        <input type="text" id="type" name="type"><br>
+                        <label for="soluong">Số lượng:</label>
+                        <input type="text" id="soluong" name="soluong"><br><br>
+                        <label for="fileInput">Tải ảnh minh họa:</label>
+                        <div class="image-upload">
+
+                            <input type="file" id="fileInput" name="image" accept="image/*">
+                        </div>
+                        <p id="error-message">Vui lòng chọn một tệp trước khi tải lên.</p>
+                        <input type="submit" value="Submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+        </div>
+            
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    document.querySelector(".danhsachsp").style.display = "block";
+    document.querySelector(".themsp").style.display = "none";
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".sidebar li a");
+  
+    links.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+  
+        // Remove active class from currently active link
+        const currentActive = document.querySelector(".sidebar li a.active");
+        if (currentActive) {
+          currentActive.classList.remove("active");
+        }
+  
+        // Add active class to clicked link
+        link.classList.add("active");
+  
+        // Determine which section to display based on link text
+        const linkText = link.querySelector(".links_name").textContent.trim();
+        if (linkText === "Danh sách sản phẩm") {
+            document.querySelector(".danhsachsp").style.display = "block";
+            document.querySelector(".themsp").style.display = "none";
+          
+        } else if (linkText === "Thêm sản phẩm") {
+            document.querySelector(".danhsachsp").style.display = "none";
+            document.querySelector(".themsp").style.display = "block";
+        } 
+      });
+    });
+  });
+  function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('display-img');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+</script>
+</html>

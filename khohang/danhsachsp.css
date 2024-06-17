@@ -1,0 +1,87 @@
+.filter-section {
+    padding: 15px;
+}
+
+.filter-section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    line-height: 2;
+}
+
+.filter-section input[type="text"],
+.filter-section input[type="number"],
+.filter-section select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section button {
+    padding: 5px 10px;
+    background-color: #ff6851;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-section button:hover {
+    background-color: #ff5237;
+}
+
+.main-danhsachsp table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-danhsachsp th,
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-danhsachsp th {
+    background-color: #f2f2f2;
+}
+
+.main-danhsachsp input[type="text"],
+.main-danhsachsp input[type="number"],
+.main-danhsachsp input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.main-danhsachsp input[type="text"]{
+    margin-top: 9px;
+}
+.main-danhsachsp .remove-button,
+.main-danhsachsp .update-button,
+.main-danhsachsp .updateimg-button {
+    background-color: #ff6851;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.main-danhsachsp .remove-button:hover,
+.main-danhsachsp .update-button:hover,
+.main-danhsachsp .updateimg-button:hover {
+    background-color: #ff5237;
+}
