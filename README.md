@@ -5,7 +5,7 @@
   - Công việc:
     - Phân chia các công việc cho các thành viên
     - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án 
-    - Xử lý toàn bộ logic BackEnd
+    - Xử lý toàn bộ logic phía BackEnd
 - **Thái Hà**:
   - Vị trí: thành viên 
   - Công việc:
