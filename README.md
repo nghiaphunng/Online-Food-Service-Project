@@ -10,15 +10,20 @@
   - Vị trí: thành viên 
   - Công việc:
     - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án 
-    - Thiết kế phần Frontend
+    - Thiết kế phần FrontEnd
 - Phan Long:
   - Vị trí: thành viên 
   - Công việc:
     - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án 
-    - Thiết kế phần Frontend
+    - Thiết kế phần FrontEnd
 - Mạnh Tuấn:
   - Vị trí: thành viên 
   - Công việc:
-    - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án   
+    - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án
+
+## 2.Các chức năng của trang web 
+
+## 3.Video demo 
+
     
 
