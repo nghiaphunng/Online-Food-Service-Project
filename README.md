@@ -1,5 +1,5 @@
 # Online-Food-Service-Project
-## 1.Thành viên 
+## 1.Thành viên và công việc
 - Duy Nghĩa:
   - Vị trí: trưởng nhóm
   - Công việc:
