@@ -22,8 +22,21 @@
     - Tham gia thiết kế và xây dựng chức năng cơ sở dữ liệu của dự án
 
 ## 2.Các chức năng của trang web 
+### 2.1.Chức năng tìm kiếm
+
+### 2.2.Đăng ký, đăng nhập
+
+### 2.3.Gửi thông báo, lời nhắn tới hệ thống 
+
+### 2.4.Chức năng riêng của người dùng là Khách hàng 
+
+### 2.5.Chức năng riêng của người dùng là Nhà hàng 
+
+### 2.6.Chức năng của Admin
 
 ## 3.Video demo 
+- Link video trên youtube : (https://youtu.be/2y1YJKyC0Gw)
+
 
     
 
