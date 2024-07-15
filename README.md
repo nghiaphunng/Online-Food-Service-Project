@@ -99,7 +99,7 @@
    - Báo lỗi, thông báo từ người dùng
    - Thông báo tới người dùng: có thể thông báo tới tất cả tài khoản người dùng hoặc một người cụ thể bằng tên đăng nhập của họ
 ## 3.Video demo 
-- Link video trên youtube : (https://youtu.be/2y1YJKyC0Gw)
+- Link video trên youtube : https://youtu.be/2y1YJKyC0Gw
 
 
     
