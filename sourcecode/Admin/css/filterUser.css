@@ -1,0 +1,36 @@
+.filter-section {
+  padding: 15px;
+}
+
+.filter-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-section label {
+  margin-right: 10px;
+  line-height: 2;
+}
+
+.filter-section input[type="text"],
+.filter-section input[type="number"],
+.filter-section select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-section button {
+  padding: 5px 10px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-section button:hover {
+  background-color: #34495e;
+}

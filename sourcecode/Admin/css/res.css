@@ -1,0 +1,25 @@
+.quan-ly-res table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .quan-ly-res th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .quan-ly-res th {
+    background-color: #f2f2f2;
+  }
+  .quan-ly-res .remove-button {
+    background-color: #ff6851;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .quan-ly-res .remove-button:hover {
+    background-color: #ff5237;
+  }
+  

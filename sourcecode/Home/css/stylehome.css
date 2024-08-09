@@ -1,0 +1,186 @@
+*{
+    font-size: 18px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: visible;
+    /* Giữ thanh cuộn dọc */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+.food_item {
+    text-align: center;
+    flex: 1 20%;
+    max-width: 20%;
+    box-sizing: border-box;
+}
+
+.food_img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.food_title {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+
+.food_desc {
+    margin: 0px 10px 20px 10px;
+}
+
+.filter-box {
+    display: none;
+    /* Bắt đầu với ẩn */
+    position: static;
+    top: 100%;
+    left: 0;
+    padding: 20px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.filter-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-box label,
+.filter-box select,
+.filter-box button {
+    margin-bottom: 10px;
+}
+
+.now-list-restaurant {
+
+    border-radius: 6px;
+    margin: 30px;
+    position: relative;
+}
+
+.now-list-restaurant .list-restaurant {
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+.now-list-restaurant .item-content {
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    margin: 30px;
+}
+
+.now-list-restaurant .img-restaurant {
+    border-radius: 6px 6px 0 0;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+.now-list-restaurant .info-restaurant {
+    margin-top: -5px;
+    border: 1px solid #524f4f;
+    border-radius: 0 0 6px 6px;
+    height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 230px;
+
+}
+
+.now-list-restaurant .info-basic-res {
+
+    border-bottom: 1px solid #ebebeb;
+    padding: 0px;
+}
+
+.now-list-restaurant .info-restaurant .name-res {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #252525;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.now-list-restaurant .info-restaurant .address-res {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #959595;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+
+.inf {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-button {
+    margin-top: -1px;
+    font-size: 12px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    margin-left: 28px;
+    text-align: center;
+    background-color: white;
+    height: 22px;
+}
+
+.price-button {
+    margin-top: -1px;
+    margin-left: 5px;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0px 8px 0px;
+    height: 22px;
+    background-color: white;
+
+}

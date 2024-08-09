@@ -1,0 +1,29 @@
+.home_section .main-tongquan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 4%;
+    margin-top: 2%;
+   
+  }
+  .tong-quan{
+    display: none;
+  }
+  .home_section .main-tongquan .tq {
+    border: 1px solid var(--white-blue);
+    width: 350px;
+    height: 200px;
+    background-color: #ff6851;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px #b9b2ff;
+  }
+  
+  .home_section .main-tongquan .tq h1 {
+    color: #E4E9E7;
+    text-align: center; 
+    margin: 0; 
+  }

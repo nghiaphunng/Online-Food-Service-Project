@@ -1,0 +1,13 @@
+.quan-ly-errU table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .quan-ly-errU th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .quan-ly-errU th {
+    background-color: #f2f2f2;
+  }
